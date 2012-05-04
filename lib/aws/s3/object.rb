@@ -133,7 +133,12 @@ module AWS
         
         def stream(key, bucket = nil, options = {}, &block)
           value(key, bucket, options) do |response|
-            response.read_body(&block)
+            case response
+              when Net::HTTPSuccess
+                response.read_body(&block)
+              else
+                response.read_body
+            end
           end
         end
         
