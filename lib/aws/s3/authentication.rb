@@ -105,7 +105,7 @@ module AWS
         constant :OVERRIDE_OPTIONS, ["response-content-type",
                                      "response-content-language",
                                      "response-expires",
-                                     "reponse-cache-control",
+                                     "response-cache-control",
                                      "response-content-disposition",
                                      "response-content-encoding"]
 
